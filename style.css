@@ -79,7 +79,6 @@ table {
     want to leave anybody behind.
 */
 body {
-    font-family: 'PT Sans', sans-serif;
     min-height: 740px;
     color: #fff;
 
@@ -128,7 +127,6 @@ a:hover, a:focus {
 */
 
 .fallback-message {
-    font-family: sans-serif;
     line-height: 1.3;
 
     width: 780px;
@@ -166,8 +164,7 @@ a:hover, a:focus {
     -o-box-sizing:      border-box;
     box-sizing:         border-box;
 
-    font-family: 'PT Serif', georgia, serif;
-    font-size: 56px;
+    font-size: 52px;
     line-height: 1.5;
 }
 
