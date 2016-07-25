@@ -1,0 +1,8 @@
+graph LR;
+  Poller-->Scraper1[Scraper];
+  Poller-->Scraper2[Scraper];
+  Poller-->Scraper3[Scraper];
+  Scraper1[Scraper]-->Filter;
+  Scraper2[Scraper]-->Filter;
+  Scraper3[Scraper]-->Filter;
+  Filter-->DataHandler;

@@ -6,11 +6,12 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <title>The Krihelinator</title>
 
-  <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
-  <meta name="author" content="Bartek Szopka" />
+  <meta name="description" content="Trendiness of OSS should be assessed by contribution rate, not by stars" />
+  <meta name="author" content="Tom Gurion" />
 
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" />
+  <link href="mermaid.min.css" rel="stylesheet" />
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
 
   <link rel="shortcut icon" href="favicon.png" />
@@ -40,7 +41,7 @@
   </div>
 
   <div class="step" data-x="3000">
-    <p class="centered"><b>Stars</b></p>
+    <h2>Stars</h2>
     <ul>
       <li>Are they good measurement for the success of open source software?</li>
       <li>What are we trying to measure?</li>
@@ -70,12 +71,82 @@
   </div>
 
   <div class="step" data-x="7500">
-    <b>But</b> we can't sort projects by contribution rate...
+    We can't sort projects by contribution rate...
   </div>
 
   <div class="step image-slide" data-x="9000">
     <a href="http://krihelinator.xyz">www.krihelinator.xyz</a>
     <img alt="the krihelinator" src="images/krihelinator.png" />
+  </div>
+
+  <div id="krihelimeter" class="step" data-x="10500">
+    <h2>Krihelimeter</h2>
+
+    <table align="center">
+      <tr>
+        <td>20</td>
+        <td>&nbsp;* authors</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>&nbsp;* merged and proposed pull requests</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>&nbsp;* new and closed issues</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>&nbsp;* commits</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="step image-slide" data-x="12000">
+    <h2>Pipeline process</h2>
+    <img src="images/pipeline.png" alt="pipeline diagram">
+  </div>
+
+  <div class="step" data-x="13500" data-y="-300" data-scale="0.4">
+    <h2>Poller</h2>
+    Poll the Github API to get <b>all</b> of the repositories on Github, in a
+    loop, 100 at a time.
+  </div>
+
+  <div class="step" data-x="13500" data-y="-100" data-scale="0.4">
+    <h2>16 Scrapers</h2>
+    Scrape the Pulse page for each repo, extract last week contribution
+    statistics.
+  </div>
+
+  <div class="step" data-x="13500" data-y="100" data-scale="0.4">
+    <h2>Filter</h2>
+    <ul>
+      <li>Ignores repositories with only one author.</li>
+      <li>Ignores repositories with Krihelimeter < 30.</li>
+    </ul>
+  </div>
+
+  <div class="step" data-x="13500" data-y="300" data-scale="0.4">
+    <h2>DataHandler</h2>
+    Calculate Krihelimeter and persist to DB.
+  </div>
+
+  <div class="step" data-x="15000">
+    <h2>Periodic process</h2>
+    Kicks in every 6 hours.
+  </div>
+
+  <div class="step" data-x="16500" data-y="-200" data-scale="0.4">
+    <b>Scrapes</b> the Github trending page, pass to the scrapers.
+  </div>
+
+  <div class="step" data-x="16500" data-y="0" data-scale="0.4">
+    <b>Keeps</b> the 500 repositories with the highest Krihelimeter, delete the rest.
+  </div>
+
+  <div class="step" data-x="16500" data-y="200" data-scale="0.4">
+    <b>Rescrapes</b> and update all of the repositories in the DB.
   </div>
 
 </div>

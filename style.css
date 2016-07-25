@@ -199,6 +199,12 @@ a:focus {
     font-size: 130%;
 }
 
+h2 {
+  font-size: 110%;
+  font-weight: bold;
+  text-align: center;
+}
+
 .image-slide {
   text-align: center;
 }
@@ -208,10 +214,6 @@ a:focus {
   border: 1px solid rgba(0, 0, 0, .3);
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
-}
-
-.centered {
-  text-align: center;
 }
 
 .wide {
@@ -239,7 +241,9 @@ a:focus {
   content: "\2014";
 }
 
-#overview { display: none }
+#krihelimeter table {
+  font-size: 80%;
+}
 
 /*
     We also make other steps visible and give them a pointer cursor using the
