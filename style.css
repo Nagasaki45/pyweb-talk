@@ -154,7 +154,7 @@ a:hover, a:focus {
 
 .step {
     position: relative;
-    width: 1000px;
+    width: 900px;
     padding: 40px;
     margin: 20px auto;
 
@@ -201,7 +201,7 @@ h2 {
 }
 
 .image-slide img {
-  width: 100%;
+  max-width: 100%;
   border: 1px solid rgba(0, 0, 0, .3);
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
