@@ -102,23 +102,30 @@
   </div>
 
   <div class="step image-slide" data-x="12000">
+    <h2>Alternatives</h2>
+    <a href="https://www.openhub.net/">www.openhub.net</a>
+    <img src="images/openhub.png" alt="openhub">
+    <p>Anything else?</p>
+  </div>
+
+  <div class="step image-slide" data-x="13500">
     <h2>Pipeline process</h2>
     <img src="images/pipeline.png" alt="pipeline diagram">
   </div>
 
-  <div class="step" data-x="13500" data-y="-300" data-scale="0.4">
+  <div class="step" data-x="15000" data-y="-300" data-scale="0.4">
     <h2>Poller</h2>
     Poll the Github API to get <b>all</b> of the repositories on Github, in a
     loop, 100 at a time.
   </div>
 
-  <div class="step" data-x="13500" data-y="-100" data-scale="0.4">
+  <div class="step" data-x="15000" data-y="-100" data-scale="0.4">
     <h2>16 Scrapers</h2>
     Scrape the Pulse page for each repo, extract last week contribution
     statistics.
   </div>
 
-  <div class="step" data-x="13500" data-y="100" data-scale="0.4">
+  <div class="step" data-x="15000" data-y="100" data-scale="0.4">
     <h2>Filter</h2>
     <ul>
       <li>Ignores repositories with only one author.</li>
@@ -126,33 +133,33 @@
     </ul>
   </div>
 
-  <div class="step" data-x="13500" data-y="300" data-scale="0.4">
+  <div class="step" data-x="15000" data-y="300" data-scale="0.4">
     <h2>DataHandler</h2>
     Calculate Krihelimeter and persist to DB.
   </div>
 
-  <div class="step" data-x="15000">
+  <div class="step" data-x="16500">
     <h2>Periodic process</h2>
     Kicks in every 6 hours.
   </div>
 
-  <div class="step" data-x="16500" data-y="-150" data-scale="0.4">
+  <div class="step" data-x="18000" data-y="-150" data-scale="0.4">
     <b>Scrapes</b> the Github trending page, pass to the scrapers.
   </div>
 
-  <div class="step" data-x="16500" data-y="0" data-scale="0.4">
+  <div class="step" data-x="18000" data-y="0" data-scale="0.4">
     <b>Keeps</b> the 500 repositories with the highest Krihelimeter, delete the rest.
   </div>
 
-  <div class="step" data-x="16500" data-y="150" data-scale="0.4">
+  <div class="step" data-x="18000" data-y="150" data-scale="0.4">
     <b>Rescrapes</b> and update all of the repositories in the DB.
   </div>
 
-  <div class="step image-slide" data-x="18000">
+  <div class="step image-slide" data-x="19500">
     <img src="images/elixir.png" alt="elixir logo" />
   </div>
 
-  <div id="last" class="step" data-x="9000" data-y="2000" data-scale="12">
+  <div id="last" class="step" data-x="9750" data-y="2000" data-scale="12">
     Thanks!
     <p class="big">Questions?</p>
   </div>
